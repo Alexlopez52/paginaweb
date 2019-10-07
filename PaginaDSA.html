@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bootstrap Example</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get( "https://github.com/Alexlopez52?tab=repositories", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status)
+  });
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Cosa de DSA</h2>
+  <p>Pon un usuario de github</p>
+  <form>
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+  </form>
+</div>
+<button>Buscar</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>description</th>
+        <th>number of followers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
